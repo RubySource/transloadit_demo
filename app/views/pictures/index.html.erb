@@ -8,7 +8,7 @@
 
 <h3>Upload a New Picture</h3>
 <%= form_for @picture do |f| %>
-  <input type="hidden" name="params" value= "{&quot;auth&quot;: {&quot;key&quot; :&quot;YOURKEY&quot; }, &quot;template_id&quot;: &quot;YOURtemplate&quot;, &quot;redirect_url&quot;: &quot;http://localhost:3000/pictures&quot; }" />
+  <input type="hidden" name="params" value= "{&quot;auth&quot;: {&quot;key&quot; :&quot;<%= Settings.transloadit.key %>&quot; }, &quot;template_id&quot;: &quot;889870b06e184e15a13d5689a1925b61&quot;, &quot;redirect_url&quot;: &quot;http://localhost:3000/pictures&quot; }" />
   <div class="form_field">
     <%= f.label :description %>
     <%= f.text_field :description %>

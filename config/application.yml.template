@@ -3,6 +3,8 @@ defaults: &defaults
     key: YOUR_KEY 
     secret: your_secret
     bucket: your_bucket
+  transloadit:
+    key: YOUR_TL_KEY
 
 development:
   <<: *defaults
