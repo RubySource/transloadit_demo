@@ -1,0 +1,32 @@
+<ul>
+  <% for picture in @pictures %>
+    <li>
+      <%= link_to image_tag(url_for_picture(picture, :thumbnail)), picture_url(picture) %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Upload a New Picture</h3>
+<%= form_for @picture do |f| %>
+  <input type="hidden" name="params" value= "{&quot;auth&quot;: {&quot;key&quot; :&quot;3647aca031534d389f3ded953c4d2a52&quot; }, &quot;template_id&quot;: &quot;889870b06e184e15a13d5689a1925b61&quot;, &quot;redirect_url&quot;: &quot;http://localhost:3000/pictures&quot; }" />
+  <div class="form_field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="form_field">
+    <%= f.label :file, "Choose File..." %>
+    <%= f.file_field :file %>
+  </div>
+  <%= f.hidden_field :assembly_id %>
+  <%= f.submit %>
+<% end %>
+
+<script type="text/javascript" src="//assets.transloadit.com/js/jquery.transloadit2.js"></script>
+<script type="text/javascript">
+  // We call .transloadit() after the DOM is initialized:
+$(document).ready(function() {
+    $('form').transloadit({
+wait: true
+});
+    });
+</script>

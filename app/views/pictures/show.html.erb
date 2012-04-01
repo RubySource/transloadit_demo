@@ -1,0 +1,6 @@
+<h2 class="name"><%= @picture.name %></h2>
+<%= image_tag url_for_picture(@picture, :fullsize) %>
+<p class="description"><%= @picture.description %></p>
+<p>
+  <%= link_to "Back", root_url %>
+</p>

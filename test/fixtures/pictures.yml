@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: One
+  description: First Pic
+  assembly_id: 1234
+
+two:
+  name: Two
+  description: Second Pic
+  assembly_id: 4567

@@ -1,0 +1,11 @@
+defaults: &defaults
+  s3:
+    key: YOUR_KEY 
+    secret: your_secret
+    bucket: your_bucket
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
